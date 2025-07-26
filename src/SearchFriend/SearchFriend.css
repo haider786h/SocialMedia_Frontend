@@ -1,0 +1,241 @@
+.search-friend-container {
+  max-width: 800px;
+  margin: 24px auto;
+  padding: 24px;
+  background: linear-gradient(145deg, #1e1e2f 0%, #2a2a4a 100%);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  color: #e0e0ff;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.search-heading {
+  font-size: 28px;
+  font-weight: 700;
+  color: #e0e0ff;
+  margin-bottom: 24px;
+  text-align: left;
+  letter-spacing: 0.5px;
+  line-height: 1.4;
+}
+
+.profile-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ddd;
+  margin-right: 10px;
+  background-color: #f0f0f0;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-name {
+  font-weight: 500;
+  font-size: 1rem;
+  color: #333;
+}
+
+.search-bar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.search-input {
+  flex-grow: 1;
+  padding: 10px 16px;
+  border: 2px solid #60a5fa;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #e0e0ff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  outline: none;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.search-input::placeholder {
+  color: #9ca3af;
+}
+
+.search-input:focus {
+  border-color: #3b82f6;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.search-button {
+  background: #60a5fa;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  line-height: 1.5;
+}
+
+.search-button:hover {
+  background: #3b82f6;
+  transform: translateY(-2px);
+}
+
+.search-results {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.no-results {
+  font-size: 18px;
+  font-weight: 500;
+  color: #e0e0ff;
+  text-align: left;
+  margin: 24px 0;
+  line-height: 1.6;
+}
+
+.user-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.user-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.user-name {
+  font-size: 20px;
+  font-weight: 600;
+  color: #e0e0ff;
+  letter-spacing: 0.3px;
+  line-height: 1.5;
+}
+
+.request-button {
+  background: #60a5fa;
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  line-height: 1.5;
+}
+
+.request-button:hover {
+  background: #3b82f6;
+  transform: translateY(-2px);
+}
+
+.request-button.sent {
+  background: #6b7280;
+  cursor: not-allowed;
+}
+
+.request-button.sent:hover {
+  background: #6b7280;
+  transform: none;
+}
+.request-button.friends {
+  background-color: #2ecc71;
+  color: white;
+  cursor: default;
+}
+
+.request-button.sent {
+  background-color: #f39c12;
+  color: white;
+  cursor: default;
+}
+.request-button .icon {
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .search-friend-container {
+    padding: 16px;
+    margin: 16px;
+  }
+
+  .search-heading {
+    font-size: 24px;
+  }
+
+  .search-bar {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .search-input,
+  .search-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+  }
+
+  .user-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .user-name {
+    font-size: 18px;
+  }
+
+  .request-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+  }
+
+  .no-results {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-friend-container {
+    margin: 10px;
+  }
+
+  .search-heading {
+    font-size: 22px;
+  }
+
+  .user-name {
+    font-size: 16px;
+  }
+
+  .search-input,
+  .search-button {
+    font-size: 14px;
+  }
+
+  .no-results {
+    font-size: 15px;
+  }
+}
